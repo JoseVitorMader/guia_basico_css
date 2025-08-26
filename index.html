@@ -1,0 +1,3348 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guia Completo de CSS</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar_title">
+                <img class="image_logo" src="/Design sem nome (1).png" alt="Logo" style="height: 40px;">
+                <h2 style="margin: 0;">Guia CSS</h2>
+            </div>
+        </div>
+        <ul class="nav-menu">
+            <li><a href="#home" class="nav-link active">🏠 Tela Inicial</a></li>
+            <li><a href="#syntax" class="nav-link">📝 CSS Syntax</a></li>
+            <li><a href="#how-to-add" class="nav-link">➕ How to Add CSS</a></li>
+            <li><a href="#comments" class="nav-link">💬 CSS Comments</a></li>
+            <li><a href="#errors" class="nav-link">❌ CSS Errors</a></li>
+            <li><a href="#colors" class="nav-link">🎨 CSS Colors</a></li>
+            <li><a href="#backgrounds" class="nav-link">🖼️ CSS Backgrounds</a></li>
+            <li><a href="#borders" class="nav-link">🔲 CSS Borders</a></li>
+            <li><a href="#margins" class="nav-link">📏 CSS Margins</a></li>
+            <li><a href="#padding" class="nav-link">📐 CSS Padding</a></li>
+            <li><a href="#height-width" class="nav-link">📊 CSS Height/Width</a></li>
+            <li><a href="#box-model" class="nav-link">📦 CSS Box Model</a></li>
+            <li><a href="#outline" class="nav-link">⭕ CSS Outline</a></li>
+            <li><a href="#text" class="nav-link">🔤 CSS Text</a></li>
+            <li><a href="#fonts" class="nav-link">🅰️ CSS Fonts</a></li>
+            <li><a href="#icons" class="nav-link">🚀 CSS Icons</a></li>
+            <li><a href="#links" class="nav-link">🔗 CSS Links</a></li>
+            <li><a href="#lists" class="nav-link">📋 CSS Lists</a></li>
+            <li><a href="#tables" class="nav-link">📊 CSS Tables</a></li>
+            <li><a href="#display" class="nav-link">👁️ CSS Display</a></li>
+            <li><a href="#max-width" class="nav-link">↔️ CSS Max-Width</a></li>
+            <li><a href="#position" class="nav-link">📍 CSS Position</a></li>
+            <li><a href="#z-index" class="nav-link">🏗️ CSS Z-Index</a></li>
+            <li><a href="#overflow" class="nav-link">🌊 CSS Overflow</a></li>
+            <li><a href="#float" class="nav-link">🎈 CSS Float</a></li>
+            <li><a href="#inline-block" class="nav-link">🧱 CSS Inline-Block</a></li>
+            <li><a href="#align" class="nav-link">⚖️ CSS Align</a></li>
+            <li><a href="#combinators" class="nav-link">🔗 CSS Combinators</a></li>
+            <li><a href="#pseudo-classes" class="nav-link">🎭 CSS Pseudo-Classes</a></li>
+            <li><a href="#pseudo-elements" class="nav-link">✨ CSS Pseudo-Elements</a></li>
+            <li><a href="#opacity" class="nav-link">👻 CSS Opacity</a></li>
+            <li><a href="#navbar" class="nav-link">🧭 CSS Navigation Bar</a></li>
+            <li><a href="#dropdowns" class="nav-link">📋 CSS Dropdowns</a></li>
+            <li><a href="#gallery" class="nav-link">🖼️ CSS Image Gallery</a></li>
+            <li><a href="#sprites" class="nav-link">🎮 CSS Image Sprites</a></li>
+            <li><a href="#attr-selectors" class="nav-link">🎯 CSS Attr Selectors</a></li>
+            <li><a href="#forms" class="nav-link">📝 CSS Forms</a></li>
+            <li><a href="#counters" class="nav-link">🔢 CSS Counters</a></li>
+            <li><a href="#layout" class="nav-link">🏗️ CSS Website Layout</a></li>
+            <li><a href="#units" class="nav-link">📏 CSS Units</a></li>
+            <li><a href="#specificity" class="nav-link">🎯 CSS Specificity</a></li>
+            <li><a href="#important" class="nav-link">❗ CSS !important</a></li>
+            <li><a href="#math" class="nav-link">🧮 CSS Math Functions</a></li>
+            <li><a href="#performance" class="nav-link">⚡ CSS Performance</a></li>
+            <li><a href="#accessibility" class="nav-link">♿ CSS Accessibility</a></li>
+        </ul>
+    </nav>
+
+    
+    <main class="main-content">
+        <section id="home" class="section active">
+            <div class="container">
+                <h1>Bem-vindo ao Guia Completo de CSS</h1>
+                <p class="intro">Este guia interativo foi criado para ensinar CSS de forma prática e didática. Navegue pelo menu lateral para explorar todos os conceitos importantes do CSS.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>🎯 Conceitos Fundamentais</h3>
+                        <p>Aprenda a sintaxe, seletores e propriedades básicas do CSS</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🎨 Estilização Visual</h3>
+                        <p>Cores, fundos, bordas e efeitos visuais</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>📐 Layout e Posicionamento</h3>
+                        <p>Box model, flexbox, grid e técnicas de layout</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>🚀 Técnicas Avançadas</h3>
+                        <p>Animações, responsividade e performance (WIP)</p>
+                    </div>
+                </div>
+                <p>OBS: O Tema do sistema é baseado no definido em seu sistema, ou seja, se seu sistema estiver no dark-mode o tema sera dark, caso esteja no light-mode, estará no modo light</p>
+            </div>
+        </section>
+
+
+        <section id="syntax" class="section">
+            <div class="container">
+                <h2>CSS Syntax</h2>
+                <p>A sintaxe do CSS consiste em um seletor e um bloco de declaração.</p>
+                
+                <div class="code-example">
+                    <h4>Estrutura Básica:</h4>
+                    <pre><code>seletor {
+    propriedade: valor;
+    propriedade: valor;
+}</code></pre>
+                </div>
+
+                <div class="example-demo">
+                    <h4>Exemplo Prático:</h4>
+                    <div class="demo-box syntax-demo">Este texto está estilizado</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.syntax-demo {
+    color: blue;
+    font-size: 18px;
+    background-color: #f0f0f0;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-to-add" class="section">
+            <div class="container">
+                <h2>How to Add CSS</h2>
+                <p>Existem três maneiras de adicionar CSS ao HTML:</p>
+                
+                <div class="methods-grid">
+                    <div class="method-card">
+                        <h3>1. CSS Inline</h3>
+                        <p>Aplicado diretamente no elemento HTML</p>
+                        <div class="code-example">
+                            <pre><code>&lt;h1 style="color: red;"&gt;Título&lt;/h1&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h3>2. CSS Interno</h3>
+                        <p>Definido dentro da tag &lt;style&gt; no &lt;head&gt;</p>
+                        <div class="code-example">
+                            <pre><code>&lt;style&gt;
+h1 {
+    color: red;
+}
+&lt;/style&gt;</code></pre>
+                        </div>
+                    </div>
+                    
+                    <div class="method-card">
+                        <h3>3. CSS Externo</h3>
+                        <p>Arquivo .css separado linkado no HTML</p>
+                        <div class="code-example">
+                            <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="comments" class="section">
+            <div class="container">
+                <h2>CSS Comments</h2>
+                <p>Comentários são usados para explicar o código e são ignorados pelo navegador.</p>
+                
+                <div class="code-example">
+                    <h4>Comentário de Uma Linha:</h4>
+                    <pre><code>/* Este é um comentário */
+p {
+    color: red; /* Cor do texto */
+}</code></pre>
+                </div>
+
+                <div class="code-example">
+                    <h4>Comentário Múltiplas Linhas:</h4>
+                    <pre><code>/*
+Este é um comentário
+que ocupa várias linhas
+e explica uma seção complexa
+*/</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="errors" class="section">
+            <div class="container">
+                <h2>CSS Errors</h2>
+                <p>Erros comuns em CSS e como evitá-los:</p>
+                
+                <div class="error-examples">
+                    <div class="error-card">
+                        <h3>❌ Erro: Ponto e vírgula ausente</h3>
+                        <div class="code-example error">
+                            <pre><code>/* ERRADO */
+p {
+    color: red
+    font-size: 16px;
+}</code></pre>
+                        </div>
+                        <div class="code-example correct">
+                            <pre><code>/* CORRETO */
+p {
+    color: red;
+    font-size: 16px;
+}</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="error-card">
+                        <h3>❌ Erro: Chaves não fechadas</h3>
+                        <div class="code-example error">
+                            <pre><code>/* ERRADO */
+.container {
+    width: 100%;
+    /* chave de fechamento ausente */</code></pre>
+                        </div>
+                        <div class="code-example correct">
+                            <pre><code>/* CORRETO */
+.container {
+    width: 100%;
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="colors" class="section">
+            <div class="container">
+                <h2>CSS Colors</h2>
+                <p>CSS oferece várias maneiras de definir cores:</p>
+                
+                <div class="color-methods">
+                    <div class="color-method">
+                        <h3>Nomes de Cores</h3>
+                        <div class="color-demo">
+                            <div class="color-box" style="background-color: red;">red</div>
+                            <div class="color-box" style="background-color: blue;">blue</div>
+                            <div class="color-box" style="background-color: green;">green</div>
+                        </div>
+                    </div>
+
+                    <div class="color-method">
+                        <h3>Hexadecimal</h3>
+                        <div class="color-demo">
+                            <div class="color-box" style="background-color: #ff0000;">#ff0000</div>
+                            <div class="color-box" style="background-color: #00ff00;">#00ff00</div>
+                            <div class="color-box" style="background-color: #0000ff;">#0000ff</div>
+                        </div>
+                    </div>
+
+                    <div class="color-method">
+                        <h3>RGB</h3>
+                        <div class="color-demo">
+                            <div class="color-box" style="background-color: rgb(255, 0, 0);">rgb(255, 0, 0)</div>
+                            <div class="color-box" style="background-color: rgb(0, 255, 0);">rgb(0, 255, 0)</div>
+                            <div class="color-box" style="background-color: rgb(0, 0, 255);">rgb(0, 0, 255)</div>
+                        </div>
+                    </div>
+
+                    <div class="color-method">
+                        <h3>HSL</h3>
+                        <div class="color-demo">
+                            <div class="color-box" style="background-color: hsl(0, 100%, 50%);">hsl(0, 100%, 50%)</div>
+                            <div class="color-box" style="background-color: hsl(120, 100%, 50%);">hsl(120, 100%, 50%)</div>
+                            <div class="color-box" style="background-color: hsl(240, 100%, 50%);">hsl(240, 100%, 50%)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="backgrounds" class="section">
+            <div class="container">
+                <h2>CSS Backgrounds</h2>
+                <p>Propriedades para estilizar o fundo de elementos:</p>
+                
+                <div class="background-examples">
+                    <div class="bg-example bg-color">
+                        <h4>Background Color</h4>
+                        <p>background-color: #3498db;</p>
+                    </div>
+                    
+                    <div class="bg-example bg-gradient">
+                        <h4>Background Gradient</h4>
+                        <p>background: linear-gradient(45deg, #ff6b6b, #4ecdc4);</p>
+                    </div>
+                    
+                    <div class="bg-example bg-pattern">
+                        <h4>Background Pattern</h4>
+                        <p>background: repeating-linear-gradient(45deg, transparent, transparent 10px, #ccc 10px, #ccc 20px);</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>.bg-color {
+    background-color: #3498db;
+}
+
+.bg-gradient {
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4);
+}
+
+.bg-pattern {
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        #ccc 10px,
+        #ccc 20px
+    );
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="borders" class="section">
+            <div class="container">
+                <h2>CSS Borders</h2>
+                <p>As bordas CSS permitem especificar o estilo, largura e cor da borda de um elemento:</p>
+                
+                <div class="border-examples">
+                    <div class="border-demo solid-border">
+                        <h4>Solid Border</h4>
+                        <p>border: 3px solid #007bff;</p>
+                    </div>
+                    
+                    <div class="border-demo dashed-border">
+                        <h4>Dashed Border</h4>
+                        <p>border: 3px dashed #28a745;</p>
+                    </div>
+                    
+                    <div class="border-demo dotted-border">
+                        <h4>Dotted Border</h4>
+                        <p>border: 3px dotted #ffc107;</p>
+                    </div>
+                    
+                    <div class="border-demo double-border">
+                        <h4>Double Border</h4>
+                        <p>border: 5px double #dc3545;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Propriedades individuais */
+border-width: 2px;
+border-style: solid;
+border-color: #007bff;
+
+/* Propriedade resumida */
+border: 2px solid #007bff;
+
+/* Bordas específicas */
+border-top: 1px solid #ccc;
+border-right: 2px dashed #f00;
+border-bottom: 3px dotted #0f0;
+border-left: 4px double #00f;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="margins" class="section">
+            <div class="container">
+                <h2>CSS Margins</h2>
+                <p>Margens criam espaço ao redor dos elementos, fora das bordas:</p>
+                
+                <div class="margin-examples">
+                    <div class="margin-demo" style="margin: 10px;">
+                        <h4>Margem pequena (10px)</h4>
+                        <p>margin: 10px;</p>
+                    </div>
+                    
+                    <div class="margin-demo" style="margin: 30px;">
+                        <h4>Margem média (30px)</h4>
+                        <p>margin: 30px;</p>
+                    </div>
+                    
+                    <div class="margin-demo" style="margin: 50px 10px;">
+                        <h4>Margem assimétrica</h4>
+                        <p>margin: 50px 10px;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Todas as margens iguais */
+margin: 20px;
+
+/* Vertical e horizontal */
+margin: 20px 10px;
+
+/* Top, horizontal, bottom */
+margin: 20px 10px 15px;
+
+/* Top, right, bottom, left */
+margin: 20px 10px 15px 5px;
+
+/* Propriedades individuais */
+margin-top: 20px;
+margin-right: 10px;
+margin-bottom: 15px;
+margin-left: 5px;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="padding" class="section">
+            <div class="container">
+                <h2>CSS Padding</h2>
+                <p>Padding cria espaço ao redor do conteúdo de um elemento, dentro das bordas:</p>
+                
+                <div class="padding-examples">
+                    <div class="padding-demo small-padding">
+                        <h4>Padding pequeno</h4>
+                        <p>padding: 10px;</p>
+                    </div>
+                    
+                    <div class="padding-demo medium-padding">
+                        <h4>Padding médio</h4>
+                        <p>padding: 20px;</p>
+                    </div>
+                    
+                    <div class="padding-demo large-padding">
+                        <h4>Padding grande</h4>
+                        <p>padding: 40px;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Todas as direções */
+padding: 15px;
+
+/* Vertical e horizontal */
+padding: 15px 25px;
+
+/* Top, horizontal, bottom */
+padding: 15px 25px 10px;
+
+/* Top, right, bottom, left */
+padding: 15px 25px 10px 5px;
+
+/* Propriedades individuais */
+padding-top: 15px;
+padding-right: 25px;
+padding-bottom: 10px;
+padding-left: 5px;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="height-width" class="section">
+            <div class="container">
+                <h2>CSS Height/Width</h2>
+                <p>As propriedades height e width definem a altura e largura de um elemento:</p>
+                
+                <div class="dimension-examples">
+                    <div class="dimension-demo small-box">
+                        <h4>Pequeno</h4>
+                        <p>100x100px</p>
+                    </div>
+                    
+                    <div class="dimension-demo medium-box">
+                        <h4>Médio</h4>
+                        <p>150x120px</p>
+                    </div>
+                    
+                    <div class="dimension-demo large-box">
+                        <h4>Grande</h4>
+                        <p>200x80px</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Valores fixos */
+width: 300px;
+height: 200px;
+
+/* Porcentagem */
+width: 50%;
+height: 100%;
+
+/* Valores mínimos e máximos */
+min-width: 200px;
+max-width: 800px;
+min-height: 100px;
+max-height: 400px;
+
+/* Valores automáticos */
+width: auto;
+height: auto;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="box-model" class="section">
+            <div class="container">
+                <h2>CSS Box Model</h2>
+                <p>O Box Model CSS descreve as caixas retangulares que são geradas para elementos:</p>
+                
+                <div class="box-model-demo">
+                    <div class="box-visual">
+                        <div style="text-align: center; color: #856404;">
+                            <strong>CONTENT</strong><br>
+                            O conteúdo real
+                        </div>
+                    </div>
+                    <p style="text-align: center; margin-top: 20px;">
+                        <strong>Amarelo:</strong> Content | <strong>Marrom:</strong> Border | 
+                        <strong>Transparente:</strong> Padding e Margin
+                    </p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Box model padrão */
+.box {
+    width: 300px;
+    height: 200px;
+    padding: 20px;
+    border: 10px solid #333;
+    margin: 15px;
+}
+
+/* Box-sizing para controlar o modelo */
+.border-box {
+    box-sizing: border-box; /* width inclui padding e border */
+}
+
+.content-box {
+    box-sizing: content-box; /* width só do conteúdo (padrão) */
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="outline" class="section">
+            <div class="container">
+                <h2>CSS Outline</h2>
+                <p>Outline é uma linha desenhada ao redor do elemento, fora da borda:</p>
+                
+                <div class="outline-examples">
+                    <div class="outline-demo solid-outline">
+                        <h4>Solid Outline</h4>
+                        <p>outline: 3px solid #007bff;</p>
+                    </div>
+                    
+                    <div class="outline-demo dashed-outline">
+                        <h4>Dashed Outline</h4>
+                        <p>outline: 3px dashed #28a745;</p>
+                    </div>
+                    
+                    <div class="outline-demo dotted-outline">
+                        <h4>Dotted Outline</h4>
+                        <p>outline: 3px dotted #ffc107;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Propriedades do outline */
+outline-width: 2px;
+outline-style: solid;
+outline-color: #007bff;
+
+/* Propriedade resumida */
+outline: 2px solid #007bff;
+
+/* Offset do outline */
+outline-offset: 5px;
+
+/* Remover outline */
+outline: none;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="text" class="section">
+            <div class="container">
+                <h2>CSS Text</h2>
+                <p>Propriedades CSS para estilizar texto:</p>
+                
+                <div class="text-examples">
+                    <div class="text-demo center-text">
+                        <h4>Texto Centralizado</h4>
+                        <p>text-align: center;</p>
+                    </div>
+                    
+                    <div class="text-demo justify-text">
+                        <h4>Texto Justificado</h4>
+                        <p>text-align: justify; Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    
+                    <div class="text-demo uppercase-text">
+                        <h4>Texto maiúsculo</h4>
+                        <p>text-transform: uppercase;</p>
+                    </div>
+                    
+                    <div class="text-demo underline-text">
+                        <h4>Texto sublinhado</h4>
+                        <p>text-decoration: underline;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Alinhamento */
+text-align: left | center | right | justify;
+
+/* Decoração */
+text-decoration: none | underline | overline | line-through;
+
+/* Transformação */
+text-transform: none | uppercase | lowercase | capitalize;
+
+/* Espaçamento */
+letter-spacing: 2px;
+word-spacing: 5px;
+line-height: 1.5;
+
+/* Indentação */
+text-indent: 20px;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="fonts" class="section">
+            <div class="container">
+                <h2>CSS Fonts</h2>
+                <p>Propriedades CSS para controlar fontes:</p>
+                
+                <div class="font-examples">
+                    <div class="font-demo serif-font">
+                        <h4>Fonte Serif</h4>
+                        <p>font-family: 'Times New Roman', serif;</p>
+                    </div>
+                    
+                    <div class="font-demo sans-serif-font">
+                        <h4>Fonte Sans-Serif</h4>
+                        <p>font-family: Arial, sans-serif;</p>
+                    </div>
+                    
+                    <div class="font-demo monospace-font">
+                        <h4>Fonte Monospace</h4>
+                        <p>font-family: 'Courier New', monospace;</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Família da fonte */
+font-family: Arial, sans-serif;
+
+/* Tamanho */
+font-size: 16px | 1.2em | 120% | large;
+
+/* Peso */
+font-weight: normal | bold | bolder | lighter | 100-900;
+
+/* Estilo */
+font-style: normal | italic | oblique;
+
+/* Variação */
+font-variant: normal | small-caps;
+
+/* Propriedade resumida */
+font: italic bold 16px/1.5 Arial, sans-serif;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="icons" class="section">
+            <div class="container">
+                <h2>CSS Icons</h2>
+                <p>Como adicionar e estilizar ícones com CSS:</p>
+                
+                <div class="icon-examples">
+                    <div class="icon-demo">
+                        <i class="fas fa-home"></i>
+                        <p>Home</p>
+                    </div>
+                    
+                    <div class="icon-demo">
+                        <i class="fas fa-user"></i>
+                        <p>User</p>
+                    </div>
+                    
+                    <div class="icon-demo">
+                        <i class="fas fa-heart"></i>
+                        <p>Heart</p>
+                    </div>
+                    
+                    <div class="icon-demo">
+                        <i class="fas fa-star"></i>
+                        <p>Star</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Font Awesome Icons */
+&lt;i class="fas fa-home"&gt;&lt;/i&gt;
+
+/* Estilização de ícones */
+.icon {
+    font-size: 24px;
+    color: #007bff;
+    margin-right: 10px;
+}
+
+/* Ícones com pseudo-elementos */
+.custom-icon::before {
+    content: "★";
+    color: gold;
+    font-size: 20px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="links" class="section">
+            <div class="container">
+                <h2>CSS Links</h2>
+                <p>Estilização de links em diferentes estados:</p>
+                
+                <div class="link-examples">
+                    <div class="link-demo">
+                        <h4>Link Normal</h4>
+                        <a href="#" class="styled-link">Clique aqui</a>
+                    </div>
+                    
+                    <div class="link-demo">
+                        <h4>Estados dos Links</h4>
+                        <a href="#" style="color: blue;">Link normal</a><br>
+                        <a href="#" style="color: purple;">Link visitado</a><br>
+                        <a href="#" style="color: red;">Link hover</a><br>
+                        <a href="#" style="color: orange;">Link ativo</a>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Estados dos links */
+a:link {
+    color: blue;
+    text-decoration: none;
+}
+
+a:visited {
+    color: purple;
+}
+
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+
+a:active {
+    color: orange;
+}
+
+/* Link estilizado como botão */
+.btn-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="lists" class="section">
+            <div class="container">
+                <h2>CSS Lists</h2>
+                <p>Estilização de listas ordenadas e não ordenadas:</p>
+                
+                <div class="list-examples">
+                    <div class="list-demo">
+                        <h4>Lista Padrão</h4>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                            <li>Item 3</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="list-demo">
+                        <h4>Lista Customizada</h4>
+                        <ul class="custom-list">
+                            <li>Item com checkmark</li>
+                            <li>Outro item</li>
+                            <li>Terceiro item</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="list-demo">
+                        <h4>Lista Numerada</h4>
+                        <ol style="list-style-type: upper-roman;">
+                            <li>Primeiro item</li>
+                            <li>Segundo item</li>
+                            <li>Terceiro item</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Tipos de marcadores */
+ul {
+    list-style-type: disc | circle | square | none;
+}
+
+ol {
+    list-style-type: decimal | upper-alpha | lower-roman;
+}
+
+/* Posição do marcador */
+list-style-position: inside | outside;
+
+/* Imagem como marcador */
+list-style-image: url('marker.png');
+
+/* Lista customizada com pseudo-elementos */
+.custom-list {
+    list-style: none;
+}
+
+.custom-list li::before {
+    content: "✓";
+    color: green;
+    font-weight: bold;
+    margin-right: 10px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="tables" class="section">
+            <div class="container">
+                <h2>CSS Tables</h2>
+                <p>Estilização de tabelas HTML:</p>
+                
+                <div class="table-demo">
+                    <table class="styled-table">
+                        <thead>
+                            <tr>
+                                <th>Nome</th>
+                                <th>Idade</th>
+                                <th>Cidade</th>
+                                <th>Profissão</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>João</td>
+                                <td>25</td>
+                                <td>São Paulo</td>
+                                <td>Desenvolvedor</td>
+                            </tr>
+                            <tr>
+                                <td>Maria</td>
+                                <td>30</td>
+                                <td>Rio de Janeiro</td>
+                                <td>Designer</td>
+                            </tr>
+                            <tr>
+                                <td>Pedro</td>
+                                <td>28</td>
+                                <td>Belo Horizonte</td>
+                                <td>Analista</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Estilização básica da tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Linhas zebradas */
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Hover nas linhas */
+tr:hover {
+    background-color: #f5f5f5;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- CSS Display -->
+        <section id="display" class="section">
+            <div class="container">
+                <h2>CSS Display</h2>
+                <p>A propriedade display controla como um elemento é exibido:</p>
+                
+                <div class="display-examples">
+                    <div class="display-demo">
+                        <h4>display: block</h4>
+                        <div class="demo-block">Elemento em bloco ocupa toda a largura</div>
+                        <div class="demo-block">Outro elemento em bloco</div>
+                    </div>
+                    
+                    <div class="display-demo">
+                        <h4>display: inline</h4>
+                        <span class="demo-inline">Elemento inline</span>
+                        <span class="demo-inline">fica na mesma linha</span>
+                    </div>
+                    
+                    <div class="display-demo">
+                        <h4>display: inline-block</h4>
+                        <div class="demo-inline-block">Inline</div>
+                        <div class="demo-inline-block">Block</div>
+                        <div class="demo-inline-block">Híbrido</div>
+                    </div>
+                    
+                    <div class="display-demo">
+                        <h4>display: flex</h4>
+                        <div class="demo-flex">
+                            <div class="flex-item">Item 1</div>
+                            <div class="flex-item">Item 2</div>
+                            <div class="flex-item">Item 3</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="max-width" class="section">
+            <div class="container">
+                <h2>CSS Max-Width</h2>
+                <p>A propriedade max-width define a largura máxima de um elemento:</p>
+                
+                <div class="max-width-examples">
+                    <div class="max-width-demo no-max-width">
+                        <h4>Sem Max-Width</h4>
+                        <p>Este elemento ocupa 100% da largura disponível, independente do tamanho da tela.</p>
+                    </div>
+                    
+                    <div class="max-width-demo with-max-width">
+                        <h4>Com Max-Width: 300px</h4>
+                        <p>Este elemento nunca será maior que 300px, mesmo em telas grandes.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Largura máxima */
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto; /* Centralizar */
+}
+
+/* Largura responsiva */
+.responsive-box {
+    width: 100%;
+    max-width: 600px;
+    min-width: 300px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="position" class="section">
+            <div class="container">
+                <h2>CSS Position</h2>
+                <p>A propriedade position especifica o método de posicionamento usado para um elemento:</p>
+                
+                <div class="position-examples">
+                    <div class="position-demo static-demo">Static (padrão)</div>
+                    <div class="position-demo relative-demo">Relative</div>
+                    <div class="position-demo absolute-demo">Absolute</div>
+                </div>
+                
+                <p style="margin-top: 20px;"><strong>Fixed Demo:</strong> Veja o elemento fixo no canto superior direito da tela!</p>
+                <div class="position-demo fixed-demo">Fixed</div>
+
+                <div class="code-example">
+                    <pre><code>/* Static - posicionamento normal */
+position: static; /* padrão */
+
+/* Relative - relativo à posição original */
+position: relative;
+top: 20px;
+left: 20px;
+
+/* Absolute - relativo ao elemento pai posicionado */
+position: absolute;
+top: 50px;
+right: 20px;
+
+/* Fixed - relativo à viewport */
+position: fixed;
+top: 10px;
+right: 10px;
+
+/* Sticky - híbrido entre relative e fixed */
+position: sticky;
+top: 0;</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="z-index" class="section">
+            <div class="container">
+                <h2>CSS Z-Index</h2>
+                <p>A propriedade z-index controla a ordem de empilhamento dos elementos:</p>
+                
+                <div class="z-index-examples">
+                    <div class="z-index-demo z1">Z-Index: 1</div>
+                    <div class="z-index-demo z2">Z-Index: 2</div>
+                    <div class="z-index-demo z3">Z-Index: 3</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Z-index funciona apenas com elementos posicionados */
+.element-1 {
+    position: relative;
+    z-index: 1; /* Atrás */
+}
+
+.element-2 {
+    position: absolute;
+    z-index: 10; /* Na frente */
+}
+
+.element-3 {
+    position: fixed;
+    z-index: 999; /* Sempre no topo */
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="overflow" class="section">
+            <div class="container">
+                <h2>CSS Overflow</h2>
+                <p>A propriedade overflow controla o que acontece quando o conteúdo excede o tamanho do elemento:</p>
+                
+                <div class="overflow-examples">
+                    <div class="overflow-demo overflow-visible">
+                        <h4>Overflow: Visible</h4>
+                        <p>Este texto é muito longo e vai transbordar para fora da caixa, sendo completamente visível mesmo que exceda os limites definidos.</p>
+                    </div>
+                    
+                    <div class="overflow-demo overflow-hidden">
+                        <h4>Overflow: Hidden</h4>
+                        <p>Este texto é muito longo e vai ser cortado quando exceder os limites da caixa, ficando oculto.</p>
+                    </div>
+                    
+                    <div class="overflow-demo overflow-scroll">
+                        <h4>Overflow: Scroll</h4>
+                        <p>Este texto é muito longo e vai mostrar barras de rolagem para permitir ver todo o conteúdo.</p>
+                    </div>
+                    
+                    <div class="overflow-demo overflow-auto">
+                        <h4>Overflow: Auto</h4>
+                        <p>Este texto é muito longo e mostrará barras de rolagem apenas quando necessário.</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Valores de overflow */
+overflow: visible; /* Padrão - conteúdo visível */
+overflow: hidden;  /* Corta o conteúdo */
+overflow: scroll;  /* Sempre mostra scroll */
+overflow: auto;    /* Scroll quando necessário */
+
+/* Overflow horizontal e vertical */
+overflow-x: hidden;
+overflow-y: scroll;</code></pre>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="float" class="section">
+            <div class="container">
+                <h2>CSS Float</h2>
+                <p>A propriedade float é usada para posicionamento e formatação de layout:</p>
+                
+                <div class="float-examples clearfix">
+                    <div class="float-demo float-left">Float Left</div>
+                    <div class="float-demo float-right">Float Right</div>
+                    <p>Este texto flui ao redor dos elementos flutuantes. O float remove o elemento do fluxo normal do documento e o faz flutuar para a esquerda ou direita do seu contêiner.</p>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Valores de float */
+float: left;   /* Flutua para a esquerda */
+float: right;  /* Flutua para a direita */
+float: none;   /* Não flutua (padrão) */
+
+/* Limpar floats */
+clear: left;   /* Limpa floats à esquerda */
+clear: right;  /* Limpa floats à direita */
+clear: both;   /* Limpa floats dos dois lados */
+
+/* Clearfix para contêiner */
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="inline-block" class="section">
+            <div class="container">
+                <h2>CSS Inline-Block</h2>
+                <p>Display inline-block combina características de elementos inline e block:</p>
+                
+                <div class="inline-block-examples">
+                    <div class="inline-block-demo">Box 1</div>
+                    <div class="inline-block-demo">Box 2</div>
+                    <div class="inline-block-demo">Box 3</div>
+                    <div class="inline-block-demo">Box 4</div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Inline-block permite: */
+.inline-block-element {
+    display: inline-block;
+    width: 200px;        /* Largura definível */
+    height: 100px;       /* Altura definível */
+    margin: 10px;        /* Margens funcionam */
+    padding: 15px;       /* Padding funciona */
+    vertical-align: top; /* Alinhamento vertical */
+}
+
+/* Comparação com outros displays */
+.inline {
+    display: inline;     /* Não aceita width/height */
+}
+
+.block {
+    display: block;      /* Ocupa linha inteira */
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="align" class="section">
+            <div class="container">
+                <h2>CSS Align</h2>
+                <p>Técnicas para alinhar elementos horizontal e verticalmente:</p>
+                
+                <div class="align-examples">
+                    <div class="align-demo" style="text-align: center; background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Alinhamento Horizontal</h4>
+                        <div style="background: #007bff; color: white; padding: 10px; display: inline-block;">
+                            Elemento Centralizado
+                        </div>
+                    </div>
+                    
+                    <div class="align-demo" style="display: flex; justify-content: center; align-items: center; height: 150px; background: #f8f9fa; margin: 20px 0; border-radius: 5px;">
+                        <div style="background: #28a745; color: white; padding: 15px; border-radius: 5px;">
+                            Centralizado com Flexbox
+                        </div>
+                    </div>
+                    
+                    <div class="align-demo" style="display: grid; place-items: center; height: 150px; background: #f8f9fa; margin: 20px 0; border-radius: 5px;">
+                        <div style="background: #ffc107; color: #212529; padding: 15px; border-radius: 5px;">
+                            Centralizado com Grid
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Alinhamento horizontal com text-align */
+.center-text {
+    text-align: center;
+}
+
+/* Centralizar bloco com margin */
+.center-block {
+    width: 300px;
+    margin: 0 auto;
+}
+
+/* Flexbox - mais moderno */
+.flex-center {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+}
+
+/* Grid - ainda mais moderno */
+.grid-center {
+    display: grid;
+    place-items: center;
+}
+
+/* Posicionamento absoluto */
+.absolute-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="combinators" class="section">
+            <div class="container">
+                <h2>CSS Combinators</h2>
+                <p>Combinadores CSS explicam a relação entre seletores:</p>
+                
+                <div class="combinator-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplo de Estrutura HTML:</h4>
+                        <div class="parent" style="background: #e9ecef; padding: 15px; margin: 10px 0;">
+                            <p style="background: #fff3cd; padding: 10px; margin: 5px 0;">Parágrafo descendente</p>
+                            <div style="background: #d1ecf1; padding: 10px; margin: 5px 0;">
+                                <p style="background: #d4edda; padding: 8px;">Parágrafo aninhado</p>
+                            </div>
+                            <p style="background: #f8d7da; padding: 10px; margin: 5px 0;">Outro parágrafo</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Seletor descendente (espaço) */
+div p {
+    color: blue; /* Todos os p dentro de div */
+}
+
+/* Seletor filho direto (>) */
+div > p {
+    color: red; /* Apenas p filhos diretos de div */
+}
+
+/* Seletor irmão adjacente (+) */
+h2 + p {
+    margin-top: 0; /* P imediatamente após h2 */
+}
+
+/* Seletor irmãos gerais (~) */
+h2 ~ p {
+    color: gray; /* Todos os p irmãos de h2 */
+}
+
+/* Exemplos práticos */
+.menu > li {
+    display: inline-block;
+}
+
+.article p + p {
+    text-indent: 1em;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="pseudo-classes" class="section">
+            <div class="container">
+                <h2>CSS Pseudo-Classes</h2>
+                <p>Pseudo-classes definem um estado especial de um elemento:</p>
+                
+                <div class="pseudo-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <button style="padding: 10px 20px; margin: 5px; border: none; background: #007bff; color: white; border-radius: 3px; cursor: pointer;">
+                            Hover sobre mim
+                        </button>
+                        
+                        <input type="text" placeholder="Foque aqui" style="padding: 10px; margin: 5px; border: 1px solid #ccc; border-radius: 3px;">
+                        
+                        <ul style="list-style: none; padding: 0; margin: 20px 0;">
+                            <li style="padding: 8px; background: #e9ecef; margin: 2px 0; border-radius: 3px;">Primeiro item</li>
+                            <li style="padding: 8px; background: #fff3cd; margin: 2px 0; border-radius: 3px;">Segundo item (nth-child(2))</li>
+                            <li style="padding: 8px; background: #e9ecef; margin: 2px 0; border-radius: 3px;">Terceiro item</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Pseudo-classes de interação */
+a:hover {
+    color: red; /* Quando o mouse passa por cima */
+}
+
+input:focus {
+    border-color: blue; /* Quando o elemento recebe foco */
+}
+
+button:active {
+    background-color: darkblue; /* Quando clicado */
+}
+
+/* Pseudo-classes estruturais */
+li:first-child {
+    font-weight: bold; /* Primeiro filho */
+}
+
+li:last-child {
+    border-bottom: none; /* Último filho */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Filhos pares */
+}
+
+tr:nth-child(odd) {
+    background-color: white; /* Filhos ímpares */
+}
+
+/* Pseudo-classes de estado */
+input:checked {
+    transform: scale(1.2); /* Checkbox/radio marcado */
+}
+
+input:disabled {
+    opacity: 0.5; /* Elemento desabilitado */
+}
+
+/* Pseudo-classes de validação */
+input:valid {
+    border-color: green;
+}
+
+input:invalid {
+    border-color: red;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="pseudo-elements" class="section">
+            <div class="container">
+                <h2>CSS Pseudo-Elements</h2>
+                <p>Pseudo-elementos permitem estilizar partes específicas de um elemento:</p>
+                
+                <div class="pseudo-element-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <p style="font-size: 18px; line-height: 1.6;">
+                            <span style="font-size: 3em; float: left; line-height: 1; margin-right: 8px; margin-top: -3px;">E</span>
+                            ste parágrafo tem uma letra capitular criada com ::first-letter.
+                        </p>
+                        
+                        <blockquote style="position: relative; padding: 20px; background: white; margin: 20px 0; border-left: 4px solid #007bff;">
+                            <span style="position: absolute; top: 10px; left: 10px; font-size: 2em; color: #007bff;">"</span>
+                            Esta é uma citação com aspas decorativas usando ::before e ::after.
+                            <span style="position: absolute; bottom: 10px; right: 10px; font-size: 2em; color: #007bff;">"</span>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* ::before e ::after - elementos virtuais */
+.quote::before {
+    content: """;
+    font-size: 2em;
+    color: #007bff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+.quote::after {
+    content: """;
+    font-size: 2em;
+    color: #007bff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* ::first-line - primeira linha */
+p::first-line {
+    font-weight: bold;
+    color: blue;
+}
+
+/* ::first-letter - primeira letra */
+p::first-letter {
+    font-size: 3em;
+    float: left;
+    line-height: 1;
+    margin-right: 8px;
+}
+
+/* ::selection - texto selecionado */
+::selection {
+    background-color: yellow;
+    color: black;
+}
+
+/* ::placeholder - placeholder de inputs */
+input::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+/* Exemplos criativos */
+.button::before {
+    content: "→ ";
+}
+
+.list-item::marker {
+    color: red;
+    font-size: 1.5em;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="opacity" class="section">
+            <div class="container">
+                <h2>CSS Opacity</h2>
+                <p>A propriedade opacity controla a transparência dos elementos:</p>
+                
+                <div class="opacity-examples">
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px; margin: 20px 0;">
+                        <div style="background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 5px; opacity: 1;">
+                            <h4>Opacity: 1</h4>
+                            <p>100% Visível</p>
+                        </div>
+                        <div style="background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 5px; opacity: 0.7;">
+                            <h4>Opacity: 0.7</h4>
+                            <p>70% Visível</p>
+                        </div>
+                        <div style="background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 5px; opacity: 0.5;">
+                            <h4>Opacity: 0.5</h4>
+                            <p>50% Visível</p>
+                        </div>
+                        <div style="background: #007bff; color: white; padding: 20px; text-align: center; border-radius: 5px; opacity: 0.2;">
+                            <h4>Opacity: 0.2</h4>
+                            <p>20% Visível</p>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Hover Effect:</h4>
+                        <div style="background: #28a745; color: white; padding: 15px; text-align: center; border-radius: 5px; transition: opacity 0.3s; cursor: pointer;" 
+                             onmouseover="this.style.opacity='0.7'" 
+                             onmouseout="this.style.opacity='1'">
+                            Passe o mouse aqui
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Valores de opacity */
+.fully-visible {
+    opacity: 1;    /* Totalmente visível (padrão) */
+}
+
+.semi-transparent {
+    opacity: 0.5;  /* 50% transparente */
+}
+
+.almost-invisible {
+    opacity: 0.1;  /* 90% transparente */
+}
+
+.invisible {
+    opacity: 0;    /* Completamente invisível */
+}
+
+/* Efeitos com hover */
+.fade-hover {
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.fade-hover:hover {
+    opacity: 1;
+}
+
+/* Diferença entre opacity e visibility */
+.opacity-zero {
+    opacity: 0;           /* Invisível mas ocupa espaço */
+}
+
+.visibility-hidden {
+    visibility: hidden;   /* Invisível e não ocupa espaço */
+}
+
+/* Background com transparência */
+.transparent-bg {
+    background-color: rgba(255, 0, 0, 0.5); /* Vermelho 50% transparente */
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="navbar" class="section">
+            <div class="container">
+                <h2>CSS Navigation Bar</h2>
+                <p>Como criar barras de navegação responsivas e atrativas:</p>
+                
+                <div class="navbar-examples">
+                    <div style="background: #333; border-radius: 5px; margin: 20px 0; overflow: hidden;">
+                        <nav style="display: flex; justify-content: space-between; align-items: center; padding: 0 20px;">
+                            <div style="color: white; font-weight: bold; padding: 15px 0;">Logo</div>
+                            <ul style="display: flex; list-style: none; margin: 0; padding: 0;">
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; transition: background 0.3s;" onmouseover="this.style.background='#555'" onmouseout="this.style.background='transparent'">Home</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; transition: background 0.3s;" onmouseover="this.style.background='#555'" onmouseout="this.style.background='transparent'">About</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; transition: background 0.3s;" onmouseover="this.style.background='#555'" onmouseout="this.style.background='transparent'">Services</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; transition: background 0.3s;" onmouseover="this.style.background='#555'" onmouseout="this.style.background='transparent'">Contact</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    
+                    <div style="display: flex; gap: 20px; margin: 20px 0;">
+                        <nav style="background: #007bff; width: 200px; border-radius: 5px;">
+                            <ul style="list-style: none; margin: 0; padding: 0;">
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; border-bottom: 1px solid rgba(255,255,255,0.1); transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">Dashboard</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; border-bottom: 1px solid rgba(255,255,255,0.1); transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">Profile</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; border-bottom: 1px solid rgba(255,255,255,0.1); transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">Settings</a></li>
+                                <li><a href="#" style="color: white; text-decoration: none; padding: 15px 20px; display: block; transition: background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">Logout</a></li>
+                            </ul>
+                        </nav>
+                        <div style="flex: 1; background: #f8f9fa; padding: 20px; border-radius: 5px;">
+                            <h4>Conteúdo Principal</h4>
+                            <p>Esta área mostra o conteúdo principal da página.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Navbar Horizontal */
+.navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Navbar Responsiva */
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Navbar com Flexbox */
+.flex-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #007bff;
+    padding: 0 20px;
+}
+
+.flex-navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-navbar li a {
+    color: white;
+    padding: 15px 20px;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.flex-navbar li a:hover {
+    background: rgba(255,255,255,0.1);
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="dropdowns" class="section">
+            <div class="container">
+                <h2>CSS Dropdowns</h2>
+                <p>Como criar menus dropdown puros com CSS:</p>
+                
+                <div class="dropdown-examples">
+                    <div style="background: #f8f9fa; padding: 30px; margin: 20px 0; border-radius: 5px; text-align: center;">
+                        <h4>Hover Dropdown</h4>
+                        <div style="position: relative; display: inline-block;">
+                            <button style="background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer;">
+                                Menu ▼
+                            </button>
+                            <div style="display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1; border-radius: 3px; top: 100%; left: 0;" 
+                                 onmouseenter="this.style.display='block'"
+                                 onmouseleave="this.style.display='none'">
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Link 1</a>
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Link 2</a>
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Link 3</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 30px; margin: 20px 0; border-radius: 5px; text-align: center;">
+                        <h4>Click Dropdown</h4>
+                        <div style="position: relative; display: inline-block;">
+                            <button onclick="toggleDropdown()" style="background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer;">
+                                Opções ▼
+                            </button>
+                            <div id="myDropdown" style="display: none; position: absolute; background: white; min-width: 160px; box-shadow: 0 8px 16px rgba(0,0,0,0.2); z-index: 1; border-radius: 3px; top: 100%; left: 0;">
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Opção A</a>
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Opção B</a>
+                                <a href="#" style="color: black; padding: 12px 16px; text-decoration: none; display: block; transition: background 0.3s;" onmouseover="this.style.background='#f1f1f1'" onmouseout="this.style.background='white'">Opção C</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Dropdown com Hover */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Dropdown com Click */
+.dropdown-click .dropdown-content {
+    display: none;
+}
+
+.dropdown-click .dropdown-content.show {
+    display: block;
+}
+
+/* Animação do Dropdown */
+.dropdown-animated .dropdown-content {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-animated:hover .dropdown-content {
+    opacity: 1;
+    transform: translateY(0);
+    display: block;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>CSS Image Gallery</h2>
+                <p>Como criar galerias de imagens responsivas e atrativas:</p>
+                
+                <div class="gallery-examples">
+                    <h4>Galeria em Grid:</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 20px 0;">
+                        <div style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 1</div>
+                        <div style="background: linear-gradient(45deg, #45b7d1, #96ceb4); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 2</div>
+                        <div style="background: linear-gradient(45deg, #feca57, #ff9ff3); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 3</div>
+                        <div style="background: linear-gradient(45deg, #a8e6cf, #dcedc8); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #333; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 4</div>
+                        <div style="background: linear-gradient(45deg, #74b9ff, #0984e3); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 5</div>
+                        <div style="background: linear-gradient(45deg, #fd79a8, #e84393); height: 150px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">Imagem 6</div>
+                    </div>
+                    
+                    <h4>Galeria com Lightbox:</h4>
+                    <div style="display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap;">
+                        <div style="background: linear-gradient(135deg, #667eea, #764ba2); width: 120px; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: all 0.3s;" onclick="openModal('Imagem 1')" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">🖼️ 1</div>
+                        <div style="background: linear-gradient(135deg, #f093fb, #f5576c); width: 120px; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: all 0.3s;" onclick="openModal('Imagem 2')" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">🖼️ 2</div>
+                        <div style="background: linear-gradient(135deg, #4facfe, #00f2fe); width: 120px; height: 120px; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; cursor: pointer; transition: all 0.3s;" onclick="openModal('Imagem 3')" onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 10px 20px rgba(0,0,0,0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">🖼️ 3</div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Galeria Grid Responsiva */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Overlay com informações */
+.gallery-item .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+    padding: 20px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .overlay {
+    transform: translateY(0);
+}
+
+/* Lightbox Modal */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.lightbox-content {
+    display: block;
+    margin: auto;
+    max-width: 80%;
+    max-height: 80%;
+    animation: zoom 0.6s;
+}
+
+@keyframes zoom {
+    from { transform: scale(0) }
+    to { transform: scale(1) }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="sprites" class="section">
+            <div class="container">
+                <h2>CSS Image Sprites</h2>
+                <p>Técnica para combinar várias imagens em uma só para reduzir requests HTTP:</p>
+                
+                <div class="sprite-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplo de Sprite Icons:</h4>
+                        <div style="display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+                            <div style="width: 32px; height: 32px; background: #007bff; display: flex; align-items: center; justify-content: center; color: white; border-radius: 3px;">🏠</div>
+                            <div style="width: 32px; height: 32px; background: #28a745; display: flex; align-items: center; justify-content: center; color: white; border-radius: 3px;">👤</div>
+                            <div style="width: 32px; height: 32px; background: #ffc107; display: flex; align-items: center; justify-content: center; color: #212529; border-radius: 3px;">⚙️</div>
+                            <div style="width: 32px; height: 32px; background: #dc3545; display: flex; align-items: center; justify-content: center; color: white; border-radius: 3px;">✉️</div>
+                        </div>
+                        <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                            <em>Estes ícones seriam partes de uma única imagem sprite</em>
+                        </p>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Vantagens dos Sprites:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>✅ Reduz o número de requisições HTTP</li>
+                            <li>✅ Melhora a performance da página</li>
+                            <li>✅ Reduz o tempo de carregamento</li>
+                            <li>✅ Evita "piscar" dos ícones no hover</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Sprite básico */
+.sprite {
+    background-image: url('sprite.png');
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+
+/* Ícone específico do sprite */
+.icon-home {
+    width: 32px;
+    height: 32px;
+    background-position: 0 0; /* Posição no sprite */
+}
+
+.icon-user {
+    width: 32px;
+    height: 32px;
+    background-position: -32px 0; /* 32px para a direita */
+}
+
+.icon-settings {
+    width: 32px;
+    height: 32px;
+    background-position: -64px 0; /* 64px para a direita */
+}
+
+/* Sprite hover effect */
+.icon-home:hover {
+    background-position: 0 -32px; /* Versão hover do ícone */
+}
+
+/* Sprite com diferentes tamanhos */
+.icon-large {
+    width: 48px;
+    height: 48px;
+    background-position: 0 -64px;
+}
+
+/* Background size para sprites responsivos */
+.sprite-responsive {
+    background-image: url('sprite.png');
+    background-size: 200px 100px; /* Tamanho do sprite */
+}
+
+/* Exemplo de navegação com sprites */
+.nav-sprite a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url('nav-sprite.png');
+    text-indent: -9999px; /* Esconder texto */
+}
+
+.nav-home { background-position: 0 0; }
+.nav-about { background-position: -40px 0; }
+.nav-contact { background-position: -80px 0; }</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="attr-selectors" class="section">
+            <div class="container">
+                <h2>CSS Attribute Selectors</h2>
+                <p>Seletores que permitem estilizar elementos baseados em seus atributos:</p>
+                
+                <div class="attr-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplos de Elementos com Atributos:</h4>
+                        <div style="margin: 15px 0;">
+                            <input type="text" placeholder="Campo de texto" style="padding: 8px; margin: 5px; border: 2px solid #007bff; border-radius: 3px;">
+                            <input type="email" placeholder="Email" style="padding: 8px; margin: 5px; border: 2px solid #28a745; border-radius: 3px;">
+                            <input type="password" placeholder="Senha" style="padding: 8px; margin: 5px; border: 2px solid #dc3545; border-radius: 3px;">
+                        </div>
+                        <div style="margin: 15px 0;">
+                            <a href="https://example.com" style="color: #007bff; text-decoration: none; margin: 5px; padding: 5px; border: 1px solid #007bff; border-radius: 3px;">Link Externo</a>
+                            <a href="#interno" style="color: #28a745; text-decoration: none; margin: 5px; padding: 5px; border: 1px solid #28a745; border-radius: 3px;">Link Interno</a>
+                        </div>
+                        <div style="margin: 15px 0;">
+                            <div class="box red" style="display: inline-block; padding: 10px; margin: 5px; background: #ffebee; border: 2px solid #f44336; border-radius: 3px;">Box Red</div>
+                            <div class="box blue" style="display: inline-block; padding: 10px; margin: 5px; background: #e3f2fd; border: 2px solid #2196f3; border-radius: 3px;">Box Blue</div>
+                            <div class="circle red" style="display: inline-block; padding: 10px; margin: 5px; background: #ffcdd2; border: 2px solid #e57373; border-radius: 50%;">Circle Red</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Seletor por atributo específico */
+[type="text"] {
+    border-color: blue;
+}
+
+/* Elementos que possuem o atributo */
+[title] {
+    border-bottom: 1px dotted;
+}
+
+/* Atributo que contém valor específico */
+[class*="button"] {
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+/* Atributo que começa com valor */
+[class^="nav-"] {
+    display: flex;
+    align-items: center;
+}
+
+/* Atributo que termina com valor */
+[class$="-icon"] {
+    font-size: 1.5em;
+}
+
+/* Links externos (que começam com http) */
+a[href^="http"] {
+    color: red;
+}
+
+a[href^="http"]:after {
+    content: " 🔗";
+}
+
+/* Inputs por tipo */
+input[type="email"] {
+    border-color: green;
+}
+
+input[type="password"] {
+    border-color: red;
+}
+
+/* Múltiplos valores de atributo */
+[class~="highlight"] {
+    background-color: yellow;
+}
+
+/* Case-insensitive (i) */
+[title*="important" i] {
+    font-weight: bold;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="forms" class="section">
+            <div class="container">
+                <h2>CSS Forms</h2>
+                <p>Estilização de formulários HTML para melhor usabilidade e aparência:</p>
+                
+                <div class="form-examples">
+                    <div style="background: #f8f9fa; padding: 30px; margin: 20px 0; border-radius: 8px;">
+                        <h4>Formulário Estilizado:</h4>
+                        <form style="max-width: 500px; margin: 0 auto;">
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Nome Completo:</label>
+                                <input type="text" placeholder="Digite seu nome" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#007bff'; this.style.outline='none'" onblur="this.style.borderColor='#ddd'">
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Email:</label>
+                                <input type="email" placeholder="seu@email.com" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; transition: border-color 0.3s;" onfocus="this.style.borderColor='#28a745'; this.style.outline='none'" onblur="this.style.borderColor='#ddd'">
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Categoria:</label>
+                                <select style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; background: white;" onfocus="this.style.borderColor='#ffc107'; this.style.outline='none'" onblur="this.style.borderColor='#ddd'">
+                                    <option>Selecione uma opção</option>
+                                    <option>Frontend</option>
+                                    <option>Backend</option>
+                                    <option>Full Stack</option>
+                                </select>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: block; margin-bottom: 5px; font-weight: bold; color: #333;">Mensagem:</label>
+                                <textarea placeholder="Digite sua mensagem..." rows="4" style="width: 100%; padding: 12px; border: 2px solid #ddd; border-radius: 5px; font-size: 16px; resize: vertical; font-family: inherit;" onfocus="this.style.borderColor='#dc3545'; this.style.outline='none'" onblur="this.style.borderColor='#ddd'"></textarea>
+                            </div>
+                            
+                            <div style="margin-bottom: 20px;">
+                                <label style="display: flex; align-items: center; cursor: pointer;">
+                                    <input type="checkbox" style="margin-right: 10px; transform: scale(1.2);">
+                                    <span>Aceito os termos e condições</span>
+                                </label>
+                            </div>
+                            
+                            <button type="submit" style="background: linear-gradient(45deg, #007bff, #0056b3); color: white; padding: 15px 30px; border: none; border-radius: 5px; font-size: 16px; cursor: pointer; transition: transform 0.3s, box-shadow 0.3s; width: 100%;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 5px 15px rgba(0,123,255,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
+                                Enviar Formulário
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Estilização básica de formulário */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background: #f9f9f9;
+    border-radius: 10px;
+}
+
+/* Labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Inputs gerais */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estados de foco */
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+/* Inputs válidos e inválidos */
+input:valid {
+    border-color: #28a745;
+}
+
+input:invalid:not(:placeholder-shown) {
+    border-color: #dc3545;
+}
+
+/* Checkbox e Radio customizados */
+.custom-checkbox {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.custom-checkbox .checkmark {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 3px;
+    position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark {
+    background: #007bff;
+    border-color: #007bff;
+}
+
+.custom-checkbox input:checked + .checkmark:after {
+    content: "✓";
+    color: white;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+
+/* Botões */
+.btn-submit {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .form-container {
+        padding: 20px;
+        margin: 20px;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="counters" class="section">
+            <div class="container">
+                <h2>CSS Counters</h2>
+                <p>CSS Counters permitem criar numeração automática de elementos:</p>
+                
+                <div class="counter-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Lista com Contador Personalizado:</h4>
+                        <ol style="counter-reset: custom-counter; list-style: none; padding-left: 0;">
+                            <li style="counter-increment: custom-counter; padding: 10px; margin: 5px 0; background: white; border-left: 4px solid #007bff; position: relative; padding-left: 60px;">
+                                <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: #007bff; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;" data-counter="1">1</span>
+                                Primeiro item da lista
+                            </li>
+                            <li style="counter-increment: custom-counter; padding: 10px; margin: 5px 0; background: white; border-left: 4px solid #28a745; position: relative; padding-left: 60px;">
+                                <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: #28a745; color: white; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;" data-counter="2">2</span>
+                                Segundo item da lista
+                            </li>
+                            <li style="counter-increment: custom-counter; padding: 10px; margin: 5px 0; background: white; border-left: 4px solid #ffc107; position: relative; padding-left: 60px;">
+                                <span style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: #ffc107; color: #212529; width: 30px; height: 30px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: bold;" data-counter="3">3</span>
+                                Terceiro item da lista
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Seções Numeradas:</h4>
+                        <div style="counter-reset: section-counter;">
+                            <div style="counter-increment: section-counter; margin: 15px 0; padding: 15px; background: white; border-radius: 5px; position: relative; padding-left: 50px;">
+                                <span style="position: absolute; left: 15px; top: 15px; background: #dc3545; color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">1</span>
+                                <strong>Introdução</strong><br>
+                                <span style="color: #666;">Este é o conteúdo da primeira seção.</span>
+                            </div>
+                            <div style="counter-increment: section-counter; margin: 15px 0; padding: 15px; background: white; border-radius: 5px; position: relative; padding-left: 50px;">
+                                <span style="position: absolute; left: 15px; top: 15px; background: #dc3545; color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">2</span>
+                                <strong>Desenvolvimento</strong><br>
+                                <span style="color: #666;">Este é o conteúdo da segunda seção.</span>
+                            </div>
+                            <div style="counter-increment: section-counter; margin: 15px 0; padding: 15px; background: white; border-radius: 5px; position: relative; padding-left: 50px;">
+                                <span style="position: absolute; left: 15px; top: 15px; background: #dc3545; color: white; padding: 5px 10px; border-radius: 3px; font-weight: bold;">3</span>
+                                <strong>Conclusão</strong><br>
+                                <span style="color: #666;">Este é o conteúdo da terceira seção.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Contador básico */
+.numbered-list {
+    counter-reset: item-counter; /* Inicializa contador */
+    list-style: none;
+}
+
+.numbered-list li {
+    counter-increment: item-counter; /* Incrementa a cada item */
+}
+
+.numbered-list li::before {
+    content: counter(item-counter) ". ";
+    color: #007bff;
+    font-weight: bold;
+}
+
+/* Contador com estilos diferentes */
+.custom-counter {
+    counter-reset: custom;
+}
+
+.custom-counter .item {
+    counter-increment: custom;
+    position: relative;
+}
+
+.custom-counter .item::before {
+    content: counter(custom);
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: -40px;
+    top: 5px;
+}
+
+/* Contador aninhado */
+.nested-counter {
+    counter-reset: section;
+}
+
+.nested-counter h2 {
+    counter-reset: subsection;
+    counter-increment: section;
+}
+
+.nested-counter h2::before {
+    content: counter(section) ". ";
+}
+
+.nested-counter h3 {
+    counter-increment: subsection;
+}
+
+.nested-counter h3::before {
+    content: counter(section) "." counter(subsection) " ";
+}
+
+/* Contador com formatação especial */
+.roman-counter {
+    counter-reset: roman-item;
+}
+
+.roman-counter li {
+    counter-increment: roman-item;
+}
+
+.roman-counter li::before {
+    content: counter(roman-item, upper-roman) ") ";
+    color: #dc3545;
+    font-weight: bold;
+}
+
+/* Contador decrescente */
+.countdown {
+    counter-reset: countdown 4; /* Inicia em 4 */
+}
+
+.countdown li {
+    counter-increment: countdown -1; /* Decrementa */
+}
+
+.countdown li::before {
+    content: counter(countdown) ". ";
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="layout" class="section">
+            <div class="container">
+                <h2>CSS Website Layout</h2>
+                <p>Técnicas modernas para criar layouts de websites responsivos:</p>
+                
+                <div class="layout-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Layout com Flexbox:</h4>
+                        <div style="display: flex; min-height: 200px; gap: 10px; margin: 15px 0;">
+                            <header style="background: #007bff; color: white; padding: 20px; flex: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Header</header>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <nav style="background: #28a745; color: white; padding: 20px; width: 200px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Nav</nav>
+                            <main style="background: #ffc107; color: #212529; padding: 20px; flex: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Main Content</main>
+                            <aside style="background: #dc3545; color: white; padding: 20px; width: 150px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Aside</aside>
+                        </div>
+                        <div style="display: flex; gap: 10px; margin: 15px 0;">
+                            <footer style="background: #6c757d; color: white; padding: 20px; flex: 1; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Footer</footer>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Layout com CSS Grid:</h4>
+                        <div style="display: grid; grid-template-areas: 'header header header' 'nav main aside' 'footer footer footer'; grid-template-columns: 200px 1fr 150px; grid-template-rows: 80px 200px 60px; gap: 10px; margin: 15px 0;">
+                            <div style="grid-area: header; background: #007bff; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Header</div>
+                            <div style="grid-area: nav; background: #28a745; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Navigation</div>
+                            <div style="grid-area: main; background: #ffc107; color: #212529; padding: 20px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Main Content</div>
+                            <div style="grid-area: aside; background: #dc3545; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Sidebar</div>
+                            <div style="grid-area: footer; background: #6c757d; color: white; padding: 20px; display: flex; align-items: center; justify-content: center; border-radius: 5px;">Footer</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Layout com Flexbox */
+.flex-layout {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.flex-header {
+    background: #333;
+    color: white;
+    padding: 20px;
+}
+
+.flex-main {
+    display: flex;
+    flex: 1;
+}
+
+.flex-nav {
+    background: #f4f4f4;
+    width: 200px;
+    padding: 20px;
+}
+
+.flex-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.flex-aside {
+    background: #e4e4e4;
+    width: 250px;
+    padding: 20px;
+}
+
+.flex-footer {
+    background: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Layout com CSS Grid */
+.grid-layout {
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    grid-template-columns: 200px 1fr 250px;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.grid-header { grid-area: header; }
+.grid-nav { grid-area: nav; }
+.grid-main { grid-area: main; }
+.grid-aside { grid-area: aside; }
+.grid-footer { grid-area: footer; }
+
+/* Layout Responsivo */
+@media (max-width: 768px) {
+    .grid-layout {
+        grid-template-areas: 
+            "header"
+            "nav"
+            "main"
+            "aside"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+    
+    .flex-main {
+        flex-direction: column;
+    }
+    
+    .flex-nav, .flex-aside {
+        width: 100%;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="units" class="section">
+            <div class="container">
+                <h2>CSS Units</h2>
+                <p>Diferentes unidades de medida em CSS e quando usar cada uma:</p>
+                
+                <div class="units-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Unidades Absolutas:</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 15px; margin: 15px 0;">
+                            <div style="background: #007bff; color: white; padding: 10px; text-align: center; border-radius: 3px; width: 100px;">100px</div>
+                            <div style="background: #28a745; color: white; padding: 10px; text-align: center; border-radius: 3px; width: 2.64cm;">2.64cm</div>
+                            <div style="background: #ffc107; color: #212529; padding: 10px; text-align: center; border-radius: 3px; width: 1in;">1in (96px)</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Unidades Relativas:</h4>
+                        <div style="font-size: 20px; margin: 15px 0;">
+                            <div style="background: #dc3545; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; width: 10em;">10em (relativo ao font-size)</div>
+                            <div style="background: #6f42c1; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; width: 15rem;">15rem (relativo ao root)</div>
+                            <div style="background: #20c997; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; width: 50%;">50% (relativo ao pai)</div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Unidades de Viewport:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: #fd7e14; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; width: 30vw;">30vw (30% da largura da tela)</div>
+                            <div style="background: #e83e8c; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; height: 10vh; display: flex; align-items: center; justify-content: center;">10vh (10% da altura da tela)</div>
+                            <div style="background: #6610f2; color: white; padding: 10px; margin: 5px 0; border-radius: 3px; font-size: 5vmin;">5vmin (5% do menor lado)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Unidades Absolutas */
+.pixels { width: 300px; }           /* Pixels - mais comum */
+.centimeters { width: 10cm; }       /* Centímetros */
+.millimeters { width: 100mm; }      /* Milímetros */
+.inches { width: 2in; }             /* Polegadas (1in = 96px) */
+.points { font-size: 12pt; }        /* Pontos (1pt = 1.33px) */
+.picas { font-size: 1pc; }          /* Picas (1pc = 16px) */
+
+/* Unidades Relativas */
+.em-unit { 
+    font-size: 1.5em;               /* 1.5x o tamanho do pai */
+    margin: 2em;                    /* 2x o font-size atual */
+}
+
+.rem-unit {
+    font-size: 1.2rem;              /* 1.2x o font-size do root */
+    padding: 1rem;                  /* Baseado no root */
+}
+
+.percentage {
+    width: 50%;                     /* 50% do elemento pai */
+    height: 75%;                    /* 75% da altura do pai */
+}
+
+/* Unidades de Viewport */
+.viewport-width { width: 100vw; }   /* 100% da largura da tela */
+.viewport-height { height: 100vh; } /* 100% da altura da tela */
+.viewport-min { font-size: 4vmin; } /* 4% do menor lado (width/height) */
+.viewport-max { font-size: 4vmax; } /* 4% do maior lado */
+
+/* Uso prático das unidades */
+.responsive-text {
+    font-size: clamp(1rem, 4vw, 2rem); /* Min 1rem, ideal 4vw, max 2rem */
+}
+
+.container {
+    max-width: min(90vw, 1200px);      /* Menor entre 90vw e 1200px */
+    margin: 0 auto;
+}
+
+/* Quando usar cada unidade */
+/* px - bordas, sombras, detalhes fixos */
+/* em - espaçamentos relativos ao texto */
+/* rem - tamanhos de fonte, espaçamentos consistentes */
+/* % - layouts fluidos, widths */
+/* vw/vh - layouts full-screen, elementos responsivos */</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="specificity" class="section">
+            <div class="container">
+                <h2>CSS Specificity</h2>
+                <p>Como o CSS determina qual regra aplicar quando há conflitos:</p>
+                
+                <div class="specificity-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Hierarquia de Especificidade:</h4>
+                        <div style="display: grid; gap: 15px; margin: 15px 0;">
+                            <div style="background: #dc3545; color: white; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+                                <span style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 3px; margin-right: 15px; font-weight: bold;">1000</span>
+                                <div>
+                                    <strong>Inline Styles</strong><br>
+                                    <code>style="color: red;"</code>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #fd7e14; color: white; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+                                <span style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 3px; margin-right: 15px; font-weight: bold;">100</span>
+                                <div>
+                                    <strong>IDs</strong><br>
+                                    <code>#header { color: blue; }</code>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #ffc107; color: #212529; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+                                <span style="background: rgba(0,0,0,0.1); padding: 5px 10px; border-radius: 3px; margin-right: 15px; font-weight: bold;">10</span>
+                                <div>
+                                    <strong>Classes, Atributos, Pseudo-classes</strong><br>
+                                    <code>.menu, [type="text"], :hover</code>
+                                </div>
+                            </div>
+                            
+                            <div style="background: #28a745; color: white; padding: 15px; border-radius: 5px; display: flex; align-items: center;">
+                                <span style="background: rgba(255,255,255,0.2); padding: 5px 10px; border-radius: 3px; margin-right: 15px; font-weight: bold;">1</span>
+                                <div>
+                                    <strong>Elementos e Pseudo-elementos</strong><br>
+                                    <code>div, p, ::before</code>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplos de Cálculo:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: white; padding: 15px; margin: 10px 0; border-left: 4px solid #007bff; border-radius: 3px;">
+                                <strong>Especificidade: 0,1,1,1</strong><br>
+                                <code>div#content .article p</code>
+                                <small style="color: #666;">(0 inline + 1 ID + 1 classe + 1 elemento = 111)</small>
+                            </div>
+                            
+                            <div style="background: white; padding: 15px; margin: 10px 0; border-left: 4px solid #28a745; border-radius: 3px;">
+                                <strong>Especificidade: 0,0,2,1</strong><br>
+                                <code>p.intro.highlight</code>
+                                <small style="color: #666;">(0 inline + 0 ID + 2 classes + 1 elemento = 021)</small>
+                            </div>
+                            
+                            <div style="background: white; padding: 15px; margin: 10px 0; border-left: 4px solid #ffc107; border-radius: 3px;">
+                                <strong>Especificidade: 0,0,1,0</strong><br>
+                                <code>.menu:hover</code>
+                                <small style="color: #666;">(0 inline + 0 ID + 1 classe + 1 pseudo-classe + 0 elemento = 020)</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="demo-specificity" style="background: #d1ecf1; padding: 20px; margin: 20px 0; border-radius: 5px; color: #0c5460;">
+                        <h4>Demonstração Prática:</h4>
+                        <p class="demo-text" style="color: red;">Este texto será azul porque o ID tem maior especificidade que a classe!</p>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* Exemplo de especificidade em ação */
+
+/* Especificidade: 0,0,0,1 (1 ponto) */
+p {
+    color: black;
+}
+
+/* Especificidade: 0,0,1,0 (10 pontos) */
+.text {
+    color: red;
+}
+
+/* Especificidade: 0,1,0,0 (100 pontos) */
+#demo {
+    color: blue; /* Esta regra vence! */
+}
+
+/* Especificidade: 0,0,2,1 (21 pontos) */
+p.text.highlight {
+    color: green;
+}
+
+/* Especificidade: 0,1,1,1 (111 pontos) */
+div#demo .text {
+    color: purple; /* Esta venceria se o elemento tivesse essas classes */
+}
+
+/* Dicas importantes sobre especificidade: */
+
+/* 1. !important quebra a especificidade normal */
+p {
+    color: yellow !important; /* Sempre vence (exceto outro !important) */
+}
+
+/* 2. Inline styles têm especificidade 1000 */
+/* <p style="color: orange;">Sempre vence (exceto !important)</p> */
+
+/* 3. Para calcular especificidade: */
+/*    - Conte IDs (centenas)           */
+/*    - Conte classes/atributos/pseudo-classes (dezenas) */
+/*    - Conte elementos/pseudo-elementos (unidades) */
+
+/* 4. Seletores mais específicos vencem */
+.menu ul li a { color: blue; }     /* Especificidade: 0,0,1,3 */
+.menu a { color: red; }            /* Especificidade: 0,0,1,1 */
+/* O primeiro vence por ser mais específico */
+
+/* 5. Em caso de empate, a última regra vence */
+.text { color: red; }
+.text { color: blue; }  /* Esta vence por estar por último */</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="important" class="section">
+            <div class="container">
+                <h2>CSS !important</h2>
+                <p>Como e quando usar a declaração !important (use com cuidado!):</p>
+                
+                <div class="important-examples">
+                    <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #ffc107;">
+                        <h4>⚠️ Aviso Importante:</h4>
+                        <p><strong>!important</strong> deve ser usado apenas como último recurso. Ele quebra o fluxo natural de especificidade e pode tornar o CSS difícil de manter.</p>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplo de Uso (e Problema):</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: #dc3545; color: white; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                                <strong>Elemento com !important</strong><br>
+                                <span style="color: yellow !important;">Este texto é amarelo devido ao !important, mesmo que outras regras tentem alterá-lo.</span>
+                            </div>
+                            
+                            <div style="background: #28a745; color: white; padding: 15px; border-radius: 5px; margin: 10px 0;">
+                                <strong>Hierarquia com !important</strong><br>
+                                <div style="background: rgba(255,255,255,0.2); padding: 10px; margin: 10px 0; border-radius: 3px;">
+                                    <span style="font-size: 16px !important;">Tamanho forçado com !important</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #d4edda; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #28a745;">
+                        <h4>✅ Casos Válidos para !important:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Sobrescrever estilos inline (quando não pode alterá-los)</li>
+                            <li>Classes utilitárias (como .hidden, .text-center)</li>
+                            <li>Sobrescrever CSS de bibliotecas externas</li>
+                            <li>Estilos de impressão</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8d7da; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #dc3545;">
+                        <h4>❌ Problemas com !important:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li>Torna o CSS difícil de manter</li>
+                            <li>Quebra a cascata natural</li>
+                            <li>Pode criar "guerra" de !important</li>
+                            <li>Dificulta debugging</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* ❌ USO INCORRETO do !important */
+.button {
+    background: blue !important;     /* Desnecessário */
+    color: white !important;         /* Desnecessário */
+    padding: 10px !important;        /* Desnecessário */
+}
+
+/* ✅ USO CORRETO - alternativas ao !important */
+
+/* 1. Aumentar especificidade naturalmente */
+.header .navigation .menu .button {
+    background: blue;                /* Mais específico que .button */
+}
+
+/* 2. Usar seletores mais específicos */
+body .container .button {
+    background: blue;
+}
+
+/* 3. Reorganizar ordem no CSS */
+.button { background: red; }
+.special-button { background: blue; } /* Vence por estar depois */
+
+/* ✅ USO VÁLIDO do !important */
+
+/* Classes utilitárias */
+.hidden {
+    display: none !important;        /* Sempre esconde elemento */
+}
+
+.text-center {
+    text-align: center !important;   /* Sempre centraliza */
+}
+
+.no-margin {
+    margin: 0 !important;            /* Remove todas as margens */
+}
+
+/* Sobrescrever bibliotecas externas */
+.bootstrap-override {
+    color: red !important;           /* Sobrescreve Bootstrap */
+}
+
+/* Estilos de impressão */
+@media print {
+    .no-print {
+        display: none !important;    /* Nunca imprime */
+    }
+    
+    .print-black {
+        color: black !important;     /* Sempre preto na impressão */
+    }
+}
+
+/* Sobrescrever inline styles quando necessário */
+.force-color {
+    color: blue !important;          /* Sobrescreve style="color: red;" */
+}
+
+/* Como evitar !important: */
+
+/* 1. Planeje a especificidade desde o início */
+/* 2. Use metodologias como BEM */
+/* 3. Evite IDs para estilos */
+/* 4. Organize bem a ordem do CSS */
+/* 5. Use CSS custom properties (variáveis) */
+
+:root {
+    --primary-color: blue;
+}
+
+.button {
+    background: var(--primary-color); /* Fácil de sobrescrever */
+}
+
+.special .button {
+    --primary-color: red;            /* Sobrescreve a variável */
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="math" class="section">
+            <div class="container">
+                <h2>CSS Math Functions</h2>
+                <p>Funções matemáticas no CSS para cálculos dinâmicos:</p>
+                
+                <div class="math-examples">
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>calc() - Cálculos básicos:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: #007bff; color: white; padding: 15px; border-radius: 5px; width: calc(100% - 40px); margin: 10px 0;">
+                                width: calc(100% - 40px)
+                            </div>
+                            <div style="background: #28a745; color: white; padding: 15px; border-radius: 5px; height: calc(200px - 2rem); display: flex; align-items: center; justify-content: center;">
+                                height: calc(200px - 2rem)
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e9ecef; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>min() e max() - Valores condicionais:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: #ffc107; color: #212529; padding: 15px; border-radius: 5px; width: min(500px, 100%); margin: 10px 0;">
+                                width: min(500px, 100%) - Nunca maior que 500px
+                            </div>
+                            <div style="background: #dc3545; color: white; padding: 15px; border-radius: 5px; font-size: max(16px, 2vw);">
+                                font-size: max(16px, 2vw) - Nunca menor que 16px
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #d1ecf1; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>clamp() - Valor entre mínimo e máximo:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="background: #6f42c1; color: white; padding: 15px; border-radius: 5px; font-size: clamp(1rem, 4vw, 2rem);">
+                                font-size: clamp(1rem, 4vw, 2rem)<br>
+                                <small>Redimensione a janela para ver o efeito!</small>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Casos de Uso Práticos:</h4>
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin: 15px 0;">
+                            <div style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4); color: white; padding: 20px; border-radius: 8px; aspect-ratio: 16/9; display: flex; align-items: center; justify-content: center; text-align: center;">
+                                <div>
+                                    <strong>Aspect Ratio</strong><br>
+                                    aspect-ratio: 16/9
+                                </div>
+                            </div>
+                            <div style="background: linear-gradient(135deg, #667eea, #764ba2); color: white; padding: 20px; border-radius: 8px; display: flex; align-items: center; justify-content: center;">
+                                <div>
+                                    <strong>Responsive Grid</strong><br>
+                                    minmax(200px, 1fr)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* calc() - Cálculos dinâmicos */
+.container {
+    width: calc(100% - 40px);         /* 100% menos 40px */
+    height: calc(100vh - 80px);       /* Viewport height menos header */
+    margin: calc(1rem + 10px);        /* Soma diferentes unidades */
+    font-size: calc(16px + 1vw);      /* Fonte responsiva */
+}
+
+/* Cálculos complexos com calc() */
+.grid-item {
+    width: calc((100% - 30px) / 3);   /* 3 colunas com gaps */
+    margin-right: calc(10px + 2%);    /* Margem dinâmica */
+}
+
+/* min() - Escolhe o menor valor */
+.responsive-width {
+    width: min(500px, 100%);          /* Máximo 500px */
+    font-size: min(3vw, 24px);        /* Máximo 24px */
+    margin: min(5vw, 50px) auto;      /* Margem responsiva */
+}
+
+/* max() - Escolhe o maior valor */
+.min-size {
+    width: max(200px, 50%);           /* Mínimo 200px */
+    font-size: max(14px, 1.2vw);      /* Mínimo 14px */
+    height: max(300px, 50vh);         /* Mínimo 300px */
+}
+
+/* clamp() - Valor entre min e max */
+.fluid-type {
+    font-size: clamp(1rem, 4vw, 2.5rem);
+    /* Mínimo 1rem, ideal 4vw, máximo 2.5rem */
+}
+
+.responsive-container {
+    width: clamp(300px, 90vw, 1200px);
+    /* Mínimo 300px, ideal 90vw, máximo 1200px */
+}
+
+.fluid-space {
+    padding: clamp(1rem, 5vw, 3rem);
+    /* Espaçamento fluido */
+}
+
+/* Casos de uso avançados */
+
+/* Layout responsivo sem media queries */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+}
+
+/* Tipografia fluida */
+.hero-title {
+    font-size: clamp(2rem, 8vw, 6rem);
+    line-height: clamp(1.2, 1.5vw + 1rem, 1.5);
+}
+
+/* Espaçamento proporcional */
+.section {
+    padding: clamp(2rem, 10vw, 8rem) clamp(1rem, 5vw, 4rem);
+}
+
+/* Combinando funções matemáticas */
+.complex-calc {
+    width: min(calc(100% - 2rem), 800px);
+    height: max(calc(50vh - 2rem), 300px);
+    margin: clamp(1rem, 3vw, 2rem) auto;
+}
+
+/* Aspect ratio responsivo */
+.video-container {
+    width: 100%;
+    aspect-ratio: 16 / 9;             /* Mantém proporção */
+}
+
+/* Grid responsivo com math functions */
+.auto-grid {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit, 
+        minmax(min(300px, 100%), 1fr)
+    );
+}
+
+/* Variáveis CSS com math functions */
+:root {
+    --min-size: 1rem;
+    --max-size: 3rem;
+    --preferred-size: 5vw;
+}
+
+.dynamic-element {
+    font-size: clamp(var(--min-size), var(--preferred-size), var(--max-size));
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="performance" class="section">
+            <div class="container">
+                <h2>CSS Performance</h2>
+                <p>Dicas para otimizar a performance do CSS:</p>
+                
+                <div class="performance-examples">
+                    <div style="background: #d4edda; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #28a745;">
+                        <h4>✅ Boas Práticas para Performance:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Minimize CSS:</strong> Remova espaços e comentários em produção</li>
+                            <li><strong>Use seletores eficientes:</strong> Evite seletores muito específicos</li>
+                            <li><strong>Prefira classes:</strong> Ao invés de IDs ou elementos</li>
+                            <li><strong>Evite !important:</strong> Dificulta otimizações</li>
+                            <li><strong>Use CSS Grid/Flexbox:</strong> Ao invés de float</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8d7da; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #dc3545;">
+                        <h4>❌ O que evitar:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Seletores complexos:</strong> body div.container ul li a span</li>
+                            <li><strong>CSS não usado:</strong> Remova estilos desnecessários</li>
+                            <li><strong>Muitas animações:</strong> Can impact performance</li>
+                            <li><strong>Importações excessivas:</strong> @import é lento</li>
+                            <li><strong>Inline styles:</strong> Para elementos repetidos</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #ffc107;">
+                        <h4>⚡ Otimizações Avançadas:</h4>
+                        <div style="display: grid; gap: 15px; margin: 15px 0;">
+                            <div style="background: white; padding: 15px; border-radius: 5px; border: 1px solid #dee2e6;">
+                                <strong>Critical CSS</strong><br>
+                                <small>Carregue apenas o CSS necessário para above-the-fold</small>
+                            </div>
+                            <div style="background: white; padding: 15px; border-radius: 5px; border: 1px solid #dee2e6;">
+                                <strong>CSS Sprites</strong><br>
+                                <small>Combine múltiplas imagens em uma só</small>
+                            </div>
+                            <div style="background: white; padding: 15px; border-radius: 5px; border: 1px solid #dee2e6;">
+                                <strong>Tree Shaking</strong><br>
+                                <small>Remova CSS não utilizado automaticamente</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* ✅ SELETORES EFICIENTES */
+
+/* Bom - específico e rápido */
+.nav-item { }
+.button-primary { }
+.card-title { }
+
+/* ❌ Evite - muito específico e lento */
+body div.container ul.nav li.nav-item a.nav-link { }
+
+/* ✅ USE METODOLOGIA BEM */
+.block { }
+.block__element { }
+.block__element--modifier { }
+
+/* ✅ PREFIRA CLASSES */
+.highlight { color: yellow; }    /* Rápido */
+
+/* ❌ EVITE ELEMENTOS E IDS */
+#content p span { color: yellow; }  /* Lento */
+
+/* ✅ OTIMIZE ANIMAÇÕES */
+.smooth-animation {
+    /* Use transform e opacity - são otimizados pelo GPU */
+    transform: translateX(100px);
+    opacity: 0.5;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+/* ❌ EVITE animar layout properties */
+.slow-animation {
+    /* width, height, margin causam reflow */
+    width: 200px;
+    transition: width 0.3s;
+}
+
+/* ✅ USE CSS CUSTOM PROPERTIES */
+:root {
+    --primary-color: #007bff;
+    --font-size: 1rem;
+}
+
+.element {
+    color: var(--primary-color);     /* Fácil de alterar */
+    font-size: var(--font-size);
+}
+
+/* ✅ COMBINE SELETORES */
+.button,
+.link,
+.tab {
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+/* ✅ USE SHORTHAND PROPERTIES */
+.optimized {
+    margin: 10px 20px;               /* Ao invés de 4 linhas */
+    background: url(img.jpg) center/cover no-repeat;
+    border: 1px solid #ccc;
+}
+
+/* ✅ MINIMIZE REPAINTS E REFLOWS */
+.gpu-optimized {
+    will-change: transform;          /* Hint para o browser */
+    transform: translate3d(0,0,0);   /* Força GPU layer */
+}
+
+/* ✅ USE CONTAINMENT */
+.contained {
+    contain: layout style paint;     /* Isola mudanças */
+}
+
+/* ✅ LAZY LOAD CSS CRÍTICO */
+/* Carregue apenas o essencial primeiro */
+.critical {
+    /* Estilos above-the-fold */
+}
+
+/* ✅ ORGANIZE CSS POR ESPECIFICIDADE */
+/* 1. Reset/Normalize */
+/* 2. Base elements */
+/* 3. Layout */
+/* 4. Components */
+/* 5. Utilities */
+
+/* ✅ USE FERRAMENTAS DE BUILD */
+/*
+- PostCSS para otimizações
+- PurgeCSS para remover CSS não usado
+- cssnano para minificação
+- critical para CSS crítico
+*/
+
+/* ✅ PREFIRA FLEXBOX/GRID */
+.modern-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 1rem;
+    /* Mais eficiente que float/position */
+}
+
+/* ✅ EVITE @import */
+/* ❌ Lento */
+@import url('fonts.css');
+
+/* ✅ Use <link> no HTML */
+/* <link rel="stylesheet" href="fonts.css"> */
+
+/* ✅ MEDIA QUERIES EFICIENTES */
+@media (min-width: 768px) {
+    .responsive {
+        /* Agrupe media queries */
+    }
+}</code></pre>
+                </div>
+            </div>
+        </section>
+
+        <section id="accessibility" class="section">
+            <div class="container">
+                <h2>CSS Accessibility</h2>
+                <p>Como criar CSS inclusivo e acessível para todos os usuários:</p>
+                
+                <div class="accessibility-examples">
+                    <div style="background: #d4edda; padding: 20px; margin: 20px 0; border-radius: 5px; border-left: 5px solid #28a745;">
+                        <h4>✅ Princípios de Acessibilidade:</h4>
+                        <ul style="margin: 10px 0; padding-left: 20px;">
+                            <li><strong>Contraste:</strong> Ratio mínimo de 4.5:1 para texto normal</li>
+                            <li><strong>Tamanho da fonte:</strong> Mínimo 16px para leitura confortável</li>
+                            <li><strong>Foco visível:</strong> Sempre mostrar onde está o foco</li>
+                            <li><strong>Movimento reduzido:</strong> Respeitar prefer-reduced-motion</li>
+                            <li><strong>Cores não exclusivas:</strong> Não use apenas cor para comunicar</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Exemplos de Contraste:</h4>
+                        <div style="display: grid; gap: 15px; margin: 15px 0;">
+                            <div style="background: #ffffff; color: #000000; padding: 15px; border-radius: 5px; border: 1px solid #dee2e6;">
+                                <strong>✅ Bom Contraste (21:1)</strong><br>
+                                Texto preto em fundo branco - fácil de ler
+                            </div>
+                            <div style="background: #007bff; color: #ffffff; padding: 15px; border-radius: 5px;">
+                                <strong>✅ Bom Contraste (5.9:1)</strong><br>
+                                Texto branco em azul - adequado para leitura
+                            </div>
+                            <div style="background: #ffc107; color: #212529; padding: 15px; border-radius: 5px;">
+                                <strong>⚠️ Contraste Moderado (4.8:1)</strong><br>
+                                Texto escuro em amarelo - no limite aceitável
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #e2e3e5; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Estados de Foco Acessíveis:</h4>
+                        <div style="display: flex; gap: 15px; margin: 15px 0; flex-wrap: wrap;">
+                            <button style="background: #007bff; color: white; border: none; padding: 12px 24px; border-radius: 5px; cursor: pointer; position: relative;" 
+                                    onfocus="this.style.outline='3px solid #80bdff'; this.style.outlineOffset='2px'" 
+                                    onblur="this.style.outline='none'">
+                                Botão com Foco Visível
+                            </button>
+                            <a href="#" style="color: #007bff; text-decoration: underline; padding: 5px;" 
+                               onfocus="this.style.outline='2px solid #007bff'; this.style.outlineOffset='2px'; this.style.borderRadius='3px'" 
+                               onblur="this.style.outline='none'">
+                                Link Acessível
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div style="background: #fff3cd; padding: 20px; margin: 20px 0; border-radius: 5px;">
+                        <h4>Indicadores Não Exclusivos de Cor:</h4>
+                        <div style="margin: 15px 0;">
+                            <div style="display: flex; align-items: center; margin: 10px 0;">
+                                <span style="color: #28a745; margin-right: 10px;">✓</span>
+                                <span>Sucesso (ícone + cor verde)</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin: 10px 0;">
+                                <span style="color: #dc3545; margin-right: 10px;">✗</span>
+                                <span>Erro (ícone + cor vermelha)</span>
+                            </div>
+                            <div style="display: flex; align-items: center; margin: 10px 0;">
+                                <span style="color: #ffc107; margin-right: 10px;">⚠</span>
+                                <span>Aviso (ícone + cor amarela)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-example">
+                    <pre><code>/* ✅ CONTRASTE ADEQUADO */
+.good-contrast {
+    background: #ffffff;
+    color: #212529;                  /* Ratio 16.75:1 */
+}
+
+.button-accessible {
+    background: #0056b3;
+    color: #ffffff;                  /* Ratio 7.5:1 */
+    border: 2px solid transparent;
+}
+
+/* ✅ FOCO VISÍVEL */
+.focus-visible {
+    outline: none;                   /* Remove outline padrão */
+}
+
+.focus-visible:focus {
+    outline: 3px solid #005fcc;      /* Outline customizado */
+    outline-offset: 2px;
+    border-radius: 3px;
+}
+
+/* ✅ SKIP LINKS */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: #fff;
+    padding: 8px;
+    text-decoration: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.skip-link:focus {
+    top: 6px;                        /* Mostra quando focado */
+}
+
+/* ✅ MOVIMENTO REDUZIDO */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ✅ CONTRASTE ALTO */
+@media (prefers-contrast: high) {
+    .text {
+        color: #000000;
+        background: #ffffff;
+        border: 2px solid #000000;
+    }
+}
+
+/* ✅ DARK MODE ACESSÍVEL */
+@media (prefers-color-scheme: dark) {
+    .dark-mode {
+        background: #121212;
+        color: #e0e0e0;              /* Contraste adequado */
+    }
+    
+    .button-dark {
+        background: #bb86fc;
+        color: #000000;              /* Contraste 11.16:1 */
+    }
+}
+
+/* ✅ TAMANHOS MÍNIMOS */
+.touch-target {
+    min-height: 44px;               /* Mínimo para touch */
+    min-width: 44px;
+    padding: 12px;
+}
+
+.text-readable {
+    font-size: max(16px, 1rem);     /* Nunca menor que 16px */
+    line-height: 1.5;               /* Espaçamento adequado */
+}
+
+/* ✅ ESTADOS VISUAIS CLAROS */
+.form-input {
+    border: 2px solid #ccc;
+    padding: 12px;
+    border-radius: 4px;
+}
+
+.form-input:focus {
+    border-color: #005fcc;
+    box-shadow: 0 0 0 3px rgba(0, 95, 204, 0.1);
+    outline: none;
+}
+
+.form-input:invalid {
+    border-color: #dc3545;
+}
+
+.form-input:invalid:focus {
+    box-shadow: 0 0 0 3px rgba(220, 53, 69, 0.1);
+}
+
+/* ✅ INDICADORES NÃO EXCLUSIVOS DE COR */
+.status-success {
+    color: #155724;
+    background: #d4edda;
+    border-left: 4px solid #28a745;
+}
+
+.status-success::before {
+    content: "✓ ";                  /* Ícone além da cor */
+    font-weight: bold;
+}
+
+.status-error {
+    color: #721c24;
+    background: #f8d7da;
+    border-left: 4px solid #dc3545;
+}
+
+.status-error::before {
+    content: "✗ ";                  /* Ícone além da cor */
+    font-weight: bold;
+}
+
+/* ✅ TEXT ALTERNATIVES */
+.icon-only {
+    position: relative;
+}
+
+.icon-only .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ✅ RESPONSIVE E ACESSÍVEL */
+@media (max-width: 768px) {
+    .mobile-accessible {
+        font-size: 18px;             /* Maior em mobile */
+        padding: 16px;               /* Mais espaço para touch */
+    }
+}
+
+/* ✅ PRINT STYLES ACESSÍVEIS */
+@media print {
+    .print-accessible {
+        color: #000 !important;
+        background: #fff !important;
+        font-size: 12pt;
+    }
+    
+    .no-print {
+        display: none !important;
+    }
+}
+
+/* ✅ UTILITIES ACESSÍVEIS */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.focus-trap:focus {
+    outline: 3px solid #005fcc;
+    outline-offset: 2px;
+}</code></pre>
+                </div>
+            </div>
+        </section>
+        
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('.section');
+
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    navLinks.forEach(l => l.classList.remove('active'));
+                    sections.forEach(s => s.classList.remove('active'));
+                    
+                    this.classList.add('active');
+                    
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.classList.add('active');
+                    }
+                });
+            });
+        });
+
+        function toggleDropdown() {
+            const dropdown = document.getElementById('myDropdown');
+            dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+        }
+
+        window.onclick = function(event) {
+            if (!event.target.matches('.dropdown button')) {
+                const dropdown = document.getElementById('myDropdown');
+                if (dropdown && dropdown.style.display === 'block') {
+                    dropdown.style.display = 'none';
+                }
+            }
+        }
+
+        function openModal(imageName) {
+            alert('Lightbox aberto para: ' + imageName + '\n\nEm um projeto real, isso abriria uma modal com a imagem em tamanho completo.');
+        }
+    </script>
+</body>
+</html>
