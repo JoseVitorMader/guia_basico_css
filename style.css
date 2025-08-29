@@ -1228,27 +1228,3 @@ body {
     color: red;
 }
 
-/* Coisos para encher de frufru*/
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* @media (prefers-color-scheme: dark) {
-    body {
-        background-color: #121212;
-        color: #e0e0e0;
-    }
-    
-    .section {
-        background: #1e1e1e;
-        color: #e0e0e0;
-    }
-    
-    .sidebar {
-        background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
-    }
-}  */
