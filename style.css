@@ -1237,7 +1237,7 @@ body {
     }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         background-color: #121212;
         color: #e0e0e0;
@@ -1251,4 +1251,4 @@ body {
     .sidebar {
         background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
     }
-} 
+}  */
